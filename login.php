@@ -17,9 +17,12 @@
         <form action="" method="POST">
             <input type="text" name="user" placeholder="Username" class="input-control">
             <input type="password" name="pass" placeholder="Password" class="input-control">
+            <p>Belum punya akun? <a href="register2.php">Daftar</a></p>
             <input type="submit" name="submit" value="Login" class="btn">
         </form>
         <?php
+        
+        session_start();
         if (isset($_POST['submit'])) {
             session_start();
             include 'db.php';

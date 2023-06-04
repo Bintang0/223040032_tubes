@@ -23,7 +23,9 @@ $a = mysqli_fetch_object($kontak);
         <div class="container">
             <h1><a href="index.php">Kyraa Hobby Shop</a></h1>
             <ul>
+                <li><a href="produk.php">Beranda</a></li>
                 <li><a href="produk.php">Produk</a></li>
+                <li><a href="loginIndex.php">Login</a></li>
             </ul>
         </div>
     </header>
@@ -33,7 +35,7 @@ $a = mysqli_fetch_object($kontak);
         <div class="container">
             <form action="produk.php">
                 <input type="text" name="search" placeholder="Cari Produk">
-                <input type="submit" name="cari" value="Cari Produk">
+                <input type="submit" name="cari" value="Search">
             </form>
         </div>
     </div>
@@ -50,7 +52,7 @@ $a = mysqli_fetch_object($kontak);
                 ?>
                         <a href="produk.php?kat=<?php echo $k['category_id'] ?>">
                             <div class="col-5">
-                                <img src="img/kategori.jpg" width="50px" style="margin-bottom:5px;">
+                                <img src="img/<?= $k['category_img']; ?>" width="50px" style="margin-bottom:5px;">
                                 <p> <?php echo $k['category_name'] ?> </p>
                             </div>
                         </a>

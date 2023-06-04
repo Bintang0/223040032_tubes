@@ -38,7 +38,7 @@ $p = mysqli_fetch_object($produk);
             <form action="produk.php">
                 <input type="text" name="search" placeholder="Cari Produk" value="<?php echo $_GET['search'] ?>">
                 <input type="hidden" name="kat" value="<?php echo $_GET['kat'] ?>">
-                <input type="submit" name="cari" value="Cari Produk">
+                <input type="submit" name="cari" value="Search">
             </form>
         </div>
     </div>
@@ -55,9 +55,9 @@ $p = mysqli_fetch_object($produk);
                     <h3><?php echo $p->product_name ?></h3>
                     <h4>Rp. <?php echo number_format($p->product_price) ?></h4>
                     <p>Deskripsi :<br>
-                        <h6><?php echo $p->product_description ?></h6>
+                    <h6><?php echo $p->product_description ?></h6>
                     </p>
-                    <h5><a href="https://api.whatsapp.com/send?phone=<?php echo $a->admin_telp ?>&text=Hai, saya tertarik dengan produk Anda." target="_blank">Hubungin via Whatsapps</a></h5>
+                    <h5><a href="https://api.whatsapp.com/send?phone=<?php echo $a->admin_telp ?>&text=Hai, saya tertarik dengan produk Anda." target="_blank">Hubungi via Whatsapps</a></h5>
                 </div>
             </div>
         </div>
